@@ -1,0 +1,14 @@
+
+type Like {
+  _id: ID!
+  uuid: ID!         @feathers(service: "like", key: "uuid", sqlTable: "Likes", sqlKey: "uuid")
+  authorUuid: ID!   @sql(sqlColumn: "author_uuid")
+  commentUuid: ID!  @sql(sqlColumn: "comment_uuid")
+  author: User!     @resolver(template: "persisted", keyHere: "authorUuid", keyThere: "uuid")
+  comment: Comment! @resolver(template: "shareable", keyHere: "commentUuid", keyThere: "uuid")
+}
+
+type Query {
+  getLike(query: JSON, params: JSON, key: JSON): Like   @resolver(template: "feathers-get", schema: "Like", sort: "uuid")
+  findLike(query: JSON, params: JSON): [Like!]          @resolver(template: "feathers-find", schema: "Like", sort: "uuid")
+}

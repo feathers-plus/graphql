@@ -1,0 +1,80 @@
+{
+  "name": "@feathers-plus/graphql",
+  "description": "GraphQL adapter for SQL and non-SQL databases.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/feathers-plus/graphql",
+  "main": "lib/",
+  "keywords": [
+    "feathers",
+    "feathers-plugin"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/feathers-plus/graphql.git"
+  },
+  "author": {
+    "name": "John J. Szwaronek",
+    "email": "johnsz9999@gmail.com"
+  },
+  "contributors": [],
+  "bugs": {
+    "url": "https://github.com/feathers-plus/graphql/issues"
+  },
+  "engines": {
+    "node": ">= 6.0.0"
+  },
+  "scripts": {
+    "publish": "git push origin --tags && npm run changelog && git push origin",
+    "release:pre": "npm version prerelease && npm publish --tag pre",
+    "release:patch": "npm version patch && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:major": "npm version major && npm publish",
+    "changelog": "github_changelog_generator && git add CHANGELOG.md && git commit -am \"Updating changelog\"",
+    "lint": "semistandard lib/*.js lib/**/*.js test/*.js test/**/*.js --fix",
+    "lintex": "semistandard example/*.js example/**/*.js",
+    "mocha": "mocha --opts mocha.opts",
+    "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- --opts mocha.opts",
+    "test": "npm run lint && npm run coverage",
+    "eslint": "eslint lib/. test/. example/config/. example/public/fedathers-app.js example/src/. example/test/. --config .eslintrc.json"
+  },
+  "semistandard": {
+    "sourceType": "module",
+    "env": [
+      "mocha"
+    ]
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "dataloader": "1.3.0",
+    "dataloader-align-results": "0.4.0",
+    "dataloader-cache-lru": "1.0.1",
+    "debug": "3.1.0",
+    "deepmerge": "1.5.2",
+    "feathers-errors": "2.9.2",
+    "feathers-hooks-common": "3.7.3",
+    "feathers-plus-common": "0.1.0",
+    "graphql": "0.11.6",
+    "graphql-tools": "2.0.0",
+    "graphql-type-json": "0.1.4",
+    "join-monster": "2.0.15",
+    "join-monster-graphql-tools-adapter": "0.0.2",
+    "lodash": "4.17.4",
+    "mongo-sql": "4.0.2"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "deep-equal": "1.0.1",
+    "eslint": "4.8.0",
+    "feathers-nedb": "2.7.0",
+    "istanbul": "1.1.0-alpha.1",
+    "merge-graphql-schemas": "1.1.4",
+    "mocha": "3.5.3",
+    "nedb": "1.8.0",
+    "semistandard": "11.0.0",
+    "sqlite": "2.8.0",
+    "sqlite3": "3.1.13"
+  }
+}

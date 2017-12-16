@@ -1,0 +1,16 @@
+
+type Relationship {
+  _id: ID!
+  uuid: ID!         @feathers(service: "relationship", key: "uuid", sqlTable: "Relationships", sqlKey: "uuid")
+  # The person who is doing the following
+  followerUuid: ID! @sql(sqlColumn: "follower_uuid")
+  # The person who is being followed
+  followeeUuid: ID! @sql(sqlColumn: "followee_uuid")
+  follower: User!   @resolver(template: "persisted", keyHere: "followerUuid", keyThere: "uuid")
+  followee: User!   @resolver(template: "persisted", keyHere: "followeeUuid", keyThere: "uuid")
+}
+
+type Query {
+  getRelationship(query: JSON, params: JSON, key: JSON): Relationship   @resolver(template: "feathers-get", schema: "Relationship", sort: "uuid")
+  findRelationship(query: JSON, params: JSON): [Relationship!]          @resolver(template: "feathers-find", schema: "Relationship", sort: "uuid")
+}
