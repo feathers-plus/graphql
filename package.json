@@ -1,6 +1,6 @@
 {
   "name": "@feathers-plus/graphql",
-  "description": "GraphQL adapter for SQL and non-SQL databases.",
+  "description": "A high performance GraphQL adapter for SQL and non-SQL databases.",
   "version": "0.1.0",
   "homepage": "https://github.com/feathers-plus/graphql",
   "main": "lib/",
