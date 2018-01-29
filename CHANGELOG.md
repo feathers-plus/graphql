@@ -1,5 +1,15 @@
 # Change Log
 
+## [v1.2.3](https://github.com/feathers-plus/graphql/tree/v1.2.3) (2018-01-29)
+[Full Changelog](https://github.com/feathers-plus/graphql/compare/v1.2.2...v1.2.3)
+
+## [v1.2.2](https://github.com/feathers-plus/graphql/tree/v1.2.2) (2018-01-29)
+[Full Changelog](https://github.com/feathers-plus/graphql/compare/v1.2.1...v1.2.2)
+
+**Merged pull requests:**
+
+- Remove dataloader ref & remove debugging .catch\(\) in service [\#1](https://github.com/feathers-plus/graphql/pull/1) ([eddyystop](https://github.com/eddyystop))
+
 ## [v1.2.1](https://github.com/feathers-plus/graphql/tree/v1.2.1) (2018-01-27)
 [Full Changelog](https://github.com/feathers-plus/graphql/compare/v1.2.0...v1.2.1)
 
