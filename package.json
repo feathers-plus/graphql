@@ -53,7 +53,6 @@
     "@feathers-plus/common": "0.1.0",
     "@feathersjs/errors": "3.2.0",
     "debug": "3.1.0",
-    "deepmerge": "1.5.2",
     "feathers-hooks-common": "3.7.3",
     "graphql": "0.11.6",
     "graphql-tools": "2.0.0",
@@ -61,7 +60,9 @@
     "join-monster": "2.0.15",
     "join-monster-graphql-tools-adapter": "0.0.2",
     "lodash": "4.17.4",
-    "mongo-sql": "4.0.2"
+    "lodash.mergewith": "4.6.0",
+    "mongo-sql": "4.0.2",
+    "traverse": "0.6.6"
   },
   "devDependencies": {
     "chai": "3.5.0",
