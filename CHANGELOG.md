@@ -1,5 +1,12 @@
 # Change Log
 
+## [v1.3.0](https://github.com/feathers-plus/graphql/tree/v1.3.0) (2018-01-31)
+[Full Changelog](https://github.com/feathers-plus/graphql/compare/v1.2.3...v1.3.0)
+
+**Merged pull requests:**
+
+- Changed code to accommodate MongoDB's ObjectID [\#2](https://github.com/feathers-plus/graphql/pull/2) ([eddyystop](https://github.com/eddyystop))
+
 ## [v1.2.3](https://github.com/feathers-plus/graphql/tree/v1.2.3) (2018-01-29)
 [Full Changelog](https://github.com/feathers-plus/graphql/compare/v1.2.2...v1.2.3)
 
