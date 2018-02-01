@@ -1,5 +1,12 @@
 # Change Log
 
+## [v1.4.0](https://github.com/feathers-plus/graphql/tree/v1.4.0) (2018-02-01)
+[Full Changelog](https://github.com/feathers-plus/graphql/compare/v1.3.0...v1.4.0)
+
+**Merged pull requests:**
+
+- Added to feathers-batch-loader an option to limit the number of keys read. [\#3](https://github.com/feathers-plus/graphql/pull/3) ([eddyystop](https://github.com/eddyystop))
+
 ## [v1.3.0](https://github.com/feathers-plus/graphql/tree/v1.3.0) (2018-01-31)
 [Full Changelog](https://github.com/feathers-plus/graphql/compare/v1.2.3...v1.3.0)
 
