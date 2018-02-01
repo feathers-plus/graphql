@@ -1,5 +1,8 @@
 # Change Log
 
+## [v1.5.0](https://github.com/feathers-plus/graphql/tree/v1.5.0) (2018-02-01)
+[Full Changelog](https://github.com/feathers-plus/graphql/compare/v1.4.0...v1.5.0)
+
 ## [v1.4.0](https://github.com/feathers-plus/graphql/tree/v1.4.0) (2018-02-01)
 [Full Changelog](https://github.com/feathers-plus/graphql/compare/v1.3.0...v1.4.0)
 
