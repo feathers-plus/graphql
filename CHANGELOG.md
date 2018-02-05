@@ -1,5 +1,12 @@
 # Change Log
 
+## [v1.6.0](https://github.com/feathers-plus/graphql/tree/v1.6.0) (2018-02-05)
+[Full Changelog](https://github.com/feathers-plus/graphql/compare/v1.5.0...v1.6.0)
+
+**Merged pull requests:**
+
+- Enhanced convertArgsToFeathers to include resolver path. [\#4](https://github.com/feathers-plus/graphql/pull/4) ([eddyystop](https://github.com/eddyystop))
+
 ## [v1.5.0](https://github.com/feathers-plus/graphql/tree/v1.5.0) (2018-02-01)
 [Full Changelog](https://github.com/feathers-plus/graphql/compare/v1.4.0...v1.5.0)
 
