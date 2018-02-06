@@ -59,8 +59,7 @@
     "graphql-type-json": "0.1.4",
     "join-monster": "2.0.15",
     "join-monster-graphql-tools-adapter": "0.0.2",
-    "lodash": "4.17.4",
-    "lodash.mergewith": "4.6.0",
+    "lodash.merge": "4.6.1",
     "mongo-sql": "4.0.2",
     "traverse": "0.6.6"
   },
