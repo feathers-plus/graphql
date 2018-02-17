@@ -1,5 +1,12 @@
 # Change Log
 
+## [v1.7.0](https://github.com/feathers-plus/graphql/tree/v1.7.0) (2018-02-06)
+[Full Changelog](https://github.com/feathers-plus/graphql/compare/v1.6.1...v1.7.0)
+
+**Merged pull requests:**
+
+- Switched to lodash.merge from lodash.mergeWith [\#6](https://github.com/feathers-plus/graphql/pull/6) ([eddyystop](https://github.com/eddyystop))
+
 ## [v1.6.1](https://github.com/feathers-plus/graphql/tree/v1.6.1) (2018-02-05)
 [Full Changelog](https://github.com/feathers-plus/graphql/compare/v1.6.0...v1.6.1)
 
