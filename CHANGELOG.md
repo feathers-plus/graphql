@@ -1,5 +1,12 @@
 # Change Log
 
+## [v1.8.0](https://github.com/feathers-plus/graphql/tree/v1.8.0) (2018-02-22)
+[Full Changelog](https://github.com/feathers-plus/graphql/compare/v1.7.0...v1.8.0)
+
+**Closed issues:**
+
+- is this module ready? [\#7](https://github.com/feathers-plus/graphql/issues/7)
+
 ## [v1.7.0](https://github.com/feathers-plus/graphql/tree/v1.7.0) (2018-02-06)
 [Full Changelog](https://github.com/feathers-plus/graphql/compare/v1.6.1...v1.7.0)
 
