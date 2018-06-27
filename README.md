@@ -77,7 +77,11 @@ The examples in [@feathers-plus/cli-generate-example](https://github.com/feather
 were all written with cli+
 and you can use cli+ to modify them.
 
-Cli+ is the easiest way to generate FeathersJS and 
+## REST and GraphQL
+
+REST and GraphQL are totally different. Each is dope *if used for the right thing.*
+
+FeathersJS, using cli+, now supports both REST and GraphQL architectural concepts and their query languages.
 
 ## License
 
