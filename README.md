@@ -11,16 +11,17 @@ The adapter can be configured to use either
 - Feathers services with [BatchLoaders](https://feathers-plus.github.io/v1/batch-loader/), or
 - raw SQL statements.
 
-Press the appropriate `Show` button in the docs to see relevant code.
+Press the appropriate `Show` button in the docs to see the relevant code.
 
 ## Examples
 
-As you can see from the sample code above,
+As you can see,
 the adapter requires multiple working parts in order to configure the GraphQL instance properly.
 That's just how GraphQL is.
 
 [@feathers-plus/cli-generate-example](https://github.com/feathers-plus/cli-generator-example)
 contains 10 working examples of using the GraphQL adapter.
+They all use the same [database](./docs/schema.jpg) and the same [test harness](./docs/test-harness.jpg).
 You should refer to them while reading the [docs](https://generator.feathers-plus.com/).
 
 ![example database schema](./docs/schema.jpg)
