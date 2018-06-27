@@ -2,10 +2,10 @@
 
 > A high performance GraphQL adapter for SQL and non-SQL databases.
 
-## Configuration
+## Configuring the adapter
 
 You can configure Feathers services using the @feathers-plus/graphql adapter as shown in the
-[docs](https://generator.feathers-plus.com/).
+[docs](https://generator.feathers-plus.com/api/#graphql).
 The adapter can be configured to use either
 - normal Feathers services,
 - Feathers services with [BatchLoaders](https://feathers-plus.github.io/v1/batch-loader/), or
@@ -25,7 +25,7 @@ You should refer to them while reading the [docs](https://generator.feathers-plu
 
 ![example database schema](./docs/schema.jpg)
 
-![example test harness](./doc/test-harness.jpg)
+![example test harness](./docs/test-harness.jpg)
 
 ## Resolver Functions
 
