@@ -1,67 +1,72 @@
 # @feathers-plus/graphql
 
-[![Build Status](https://travis-ci.org/feathers-plus/graphql.png?branch=master)](https://travis-ci.org/feathers-plus/graphql)
-[![Code Climate](https://codeclimate.com/github/feathers-plus/graphql/badges/gpa.svg)](https://codeclimate.com/github/feathers-plus/graphql)
-[![Test Coverage](https://codeclimate.com/github/feathers-plus/graphql/badges/coverage.svg)](https://codeclimate.com/github/feathers-plus/graphql/coverage)
-[![Dependency Status](https://img.shields.io/david/feathers-plus/graphql.svg?style=flat-square)](https://david-dm.org/feathers-plus/graphql)
-[![Download Status](https://img.shields.io/npm/dm/graphql.svg?style=flat-square)](https://www.npmjs.com/package/graphql)
-
 > A high performance GraphQL adapter for SQL and non-SQL databases.
 
-## Installation
+## Configuration
 
-**For now you have to install the repo directly from GitHub, not from npm.**
+You can configure Feathers services using the @feathers-plus/graphql adapter as shown in the
+[docs](https://generator.feathers-plus.com/).
+The adapter can be configured to use either
+- normal Feathers services,
+- Feathers services with [BatchLoaders](https://feathers-plus.github.io/v1/batch-loader/), or
+- raw SQL statements.
 
-```
-npm install graphql --save
-```
+Press the appropriate `Show` button in the docs to see relevant code.
 
-## Introduction
+## Examples
 
-You should understand [why you would want to use GraphQL](https://reactjs.org/blog/2015/05/01/graphql-introduction.html)
-and become [familiar with using it.](https://www.graphql.com/guides/)
+As you can see from the sample code above,
+the adapter requires multiple working parts in order to configure the GraphQL instance properly.
+That's just how GraphQL is.
 
-@feathers-plus/graphql is designed for:
-- The client specifies what deeply included data it needs.
-- Retrieving that data very efficiently.
-- Working with both SQL and non-SQL databases.
-- Generating most of the code needed to support the database schemas, while allowing customization.
+[@feathers-plus/cli-generate-example](https://github.com/feathers-plus/cli-generator-example)
+contains 10 working examples of using the GraphQL adapter.
+You should refer to them while reading the [docs](https://generator.feathers-plus.com/).
 
-Using @feathers-plus/graphql with Feathers services can be **much** faster than using the populate common hook.
-- Reads are batched, so if `user` records need to be read for different parts of the query --
-perhaps in one place we need all the authors of multiple posts, while in another place we need all the authors of some commments --
-just one `user.find({ query: { id: { $in: [...] } } })` is performed rather than a
-`user.find({ query: { id: ... } })` for each author.
-- Records are also cached, so a `user` record need not be reread.
-- You can choose to persist some caches between queries, so reads are not required to prime them at the start of each query.
-    - You can choose the maximum size appropriate for each cache to control memory pressure. The least-recently-used records are cleared.
-    - A hook is provided for your Feathers services which clears keys from a cache when their records are mutated.
+![example database schema](./docs/schema.jpg)
 
-We can illustrate the performance improvement by counting the number of Feathers service reads the example's
-[findUser query](./example/docs/find-user.md)
-performs:
-- Custom code (working very much like the populate common hook): **76 reads.**
-- High performance, generated code, the first time it runs: **7 reads.**
-- High performance, generated code, subsequent times it runs: **6 reads.**
+![example test harness](./doc/test-harness.jpg)
 
-**The performance improvement may be significant.**
+## Resolver Functions
 
-Code is generated for both Feathers services and SQL statements,
-driven by decorations which you add to the schema.
-You can customize that code and your customizations will persist through subsequent code regenerations.
-You will find these decorations are must easier and faster to write
-than coding all the required GraphQL resolvers and SQL metadata yourself.
+GraphQL is a wrapper around [resolver functions](https://graphql.org/learn/execution/#root-fields-resolvers)
+you have to provide.
+You'll be familiar with resolvers if you've used the [fastJoin](https://feathers-plus.github.io/v1/feathers-hooks-common/guide.html#fastJoin)
+common hook.
 
-You can choose, when @feathers-plus/graphql is configured, whether Feathers services or SQL statements should be used.
+You will find that you need to write **lots and lots** of resolver functions for a non-trivial app.
+For some insight, look at this
+[relatively simple example](https://github.com/feathers-plus/cli-generator-example/blob/master/js-nedb-services/src/services/graphql/service.resolvers.js)
+involving just 5 tables.
 
-## Working Example
+> Most of the effort in using GraphQL will be devoted to writing lots of resolver functions.
 
-**WIP**
+The above example uses normal Feathers service calls, without caching, without batching.
+You would see an approximate ten-fold performance improvement is you used Feathers service calls
+in conjunction with [BatchLoaders](https://feathers-plus.github.io/v1/batch-loader/).
+These types of resolver functions would be
+[more complicated.](https://github.com/feathers-plus/cli-generator-example/blob/master/js-nedb-services/src/services/graphql/batchloader.resolvers.js) 
 
-See feathers-plus/xxxx
+Finally, you may consider resolver functions which produce raw SQL statements
+if you are using an SQL database with Sequelize or Knex.
+This may very well result in a performance improvement over BatchLoaders
+but you would have to something like [join-monster](https://join-monster.readthedocs.io/en/latest/)
+along with resolver functions.
+
+## Generating Resolver Functions
+
+[@feathers-plus/cli](https://generator.feathers-plus.com/), a.k.a. cli+, was written to automatically generate
+the resolver functions for you.
+You can customize the resulting resolver code as needed.
+
+![example generate graphql](./docs/generate-graphql.png)
+
+The examples in [@feathers-plus/cli-generate-example](https://github.com/feathers-plus/cli-generator-example)
+were all written with cli+
+and you can use cli+ to modify them.
 
 ## License
 
-Copyright (c) 2017
+Copyright (c) 2018
 
 Licensed under the [MIT license](LICENSE).
