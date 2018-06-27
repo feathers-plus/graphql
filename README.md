@@ -21,12 +21,21 @@ That's just how GraphQL is.
 
 [@feathers-plus/cli-generate-example](https://github.com/feathers-plus/cli-generator-example)
 contains 10 working examples of using the GraphQL adapter.
-They all use the same [database](./docs/schema.jpg) and the same [test harness](./docs/test-harness.jpg).
+They all use the same [database and  test harness](https://generator.feathers-plus.com/get-started/#comprehensive-example).
 You should refer to them while reading the [docs](https://generator.feathers-plus.com/).
 
-![example database schema](./docs/schema.jpg)
-
-![example test harness](./docs/test-harness.jpg)
+folder name | language | database | resolver functions
+:-|:-|:-|:-|
+js-nedb-services | JavaScript | NeDB | plain Feathers calls
+js-nedb-batchloaders | JavaScript | NeDB | BatchLoader calls
+js-sequelize-services | JavaScript | Sequelize + SQLite | plain Feathers calls
+js-sequelize-batchloaders | JavaScript | Sequelize + SQLite | BatchLoader calls
+js-sequelize-sql | JavaScript | Sequelize + SQLite | raw SQL statements
+ts-nedb-services | TypeScript | NeDB | plain Feathers calls
+ts-nedb-batchloaders | TypeScript | NeDB | BatchLoader calls
+ts-sequelize-services | TypeScript | Sequelize + SQLite | plain Feathers calls
+ts-sequelize-batchloaders | TypeScript | Sequelize + SQLite | BatchLoader calls
+ts-sequelize-sql | TypeScript | Sequelize + SQLite | raw SQL statements
 
 ## Resolver Functions
 
