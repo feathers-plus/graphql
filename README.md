@@ -69,7 +69,7 @@ along with resolver functions.
 
 [@feathers-plus/cli](https://generator.feathers-plus.com/), a.k.a. cli+, was written to automatically generate
 the resolver functions for you.
-You can customize the resulting resolver code as needed.
+You can customize the resulting resolver code if necessary.
 
 ![example generate graphql](./docs/generate-graphql.png)
 
