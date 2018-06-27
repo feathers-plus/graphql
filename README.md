@@ -24,6 +24,8 @@ contains 10 working examples of using the GraphQL adapter.
 They all use the same [database and  test harness](https://generator.feathers-plus.com/get-started/#comprehensive-example).
 You should refer to them while reading the [docs](https://generator.feathers-plus.com/).
 
+The examples are:
+
 folder name | language | database | resolver functions
 :-|:-|:-|:-|
 js-nedb-services | JavaScript | NeDB | plain Feathers calls
@@ -42,9 +44,9 @@ ts-sequelize-sql | TypeScript | Sequelize + SQLite | raw SQL statements
 GraphQL is a wrapper around [resolver functions](https://graphql.org/learn/execution/#root-fields-resolvers)
 you have to provide.
 You'll be familiar with resolvers if you've used the [fastJoin](https://feathers-plus.github.io/v1/feathers-hooks-common/guide.html#fastJoin)
-common hook.
+common hook, as fastJoin's design is based on GraphQL.
 
-You will find that you need to write **lots and lots** of resolver functions for a non-trivial app.
+You will find that you need to write **lots** of resolver functions for a non-trivial app.
 For some insight, look at this
 [relatively simple example](https://github.com/feathers-plus/cli-generator-example/blob/master/js-nedb-services/src/services/graphql/service.resolvers.js)
 involving just 5 tables.
@@ -60,7 +62,7 @@ These types of resolver functions would be
 Finally, you may consider resolver functions which produce raw SQL statements
 if you are using an SQL database with Sequelize or Knex.
 This may very well result in a performance improvement over BatchLoaders
-but you would have to something like [join-monster](https://join-monster.readthedocs.io/en/latest/)
+but you would have to use something like [join-monster](https://join-monster.readthedocs.io/en/latest/)
 along with resolver functions.
 
 ## Generating Resolver Functions
@@ -74,6 +76,8 @@ You can customize the resulting resolver code as needed.
 The examples in [@feathers-plus/cli-generate-example](https://github.com/feathers-plus/cli-generator-example)
 were all written with cli+
 and you can use cli+ to modify them.
+
+Cli+ is the easiest way to generate FeathersJS and 
 
 ## License
 
