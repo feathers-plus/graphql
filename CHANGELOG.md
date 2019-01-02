@@ -1,5 +1,17 @@
 # Change Log
 
+## [v1.10.0](https://github.com/feathers-plus/graphql/tree/v1.10.0) (2019-01-02)
+[Full Changelog](https://github.com/feathers-plus/graphql/compare/v1.9.0...v1.10.0)
+
+**Closed issues:**
+
+- Status? [\#10](https://github.com/feathers-plus/graphql/issues/10)
+- Guide? [\#9](https://github.com/feathers-plus/graphql/issues/9)
+
+**Merged pull requests:**
+
+- Add create method to support Apollo [\#12](https://github.com/feathers-plus/graphql/pull/12) ([DylanSimowitz](https://github.com/DylanSimowitz))
+
 ## [v1.9.0](https://github.com/feathers-plus/graphql/tree/v1.9.0) (2018-05-09)
 [Full Changelog](https://github.com/feathers-plus/graphql/compare/v1.8.0...v1.9.0)
 
