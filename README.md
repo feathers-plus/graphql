@@ -1,6 +1,8 @@
 # @feathers-plus/graphql
 
-> A high performance GraphQL adapter for SQL and non-SQL databases.
+> __This module is no longer maintained__
+
+A high performance GraphQL adapter for SQL and non-SQL databases.
 
 ## Configuring the adapter
 
